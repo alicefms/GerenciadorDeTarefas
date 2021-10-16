@@ -7,7 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CONTROLE DE TAREFAS - CAPGEMINI</title>
-        <link rel="stylesheet" href="Styles/padraotelagrid.css">
+        <link rel="stylesheet" href="../Styles/padraotelagrid.css">
         <!-- bootstrap -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet"/>        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -17,10 +17,15 @@
     </head>
     <body>
         <%
-            Colaborador col = new Colaborador();
-       		DaoColaborador daocolab = new DaoColaborador();
-        
-            List<Colaborador> listaColaboradores = daocolab.consultarColaboradores();
+       
+        int idColaborador = Integer.parseInt(request.getParameter("idcolaborador"));
+    	DaoColaborador daocolab = new DaoColaborador();
+    	Colaborador c = daocolab.consultarColaborador(idColaborador);
+   
+   		if (c==null){
+   		out.write("Não tem nenhum Colaborador com esse ID"); }
+   		else {
+ 
         %>
         <table id="consulta">
             <!-- cabecalho da tabela -->
@@ -31,16 +36,17 @@
                 <th> Excluir </th>
             </thead>
             <!-- corpo da tabela -->
-            <tbody>
-                <% for (Colaborador c: listaColaboradores) { %>
+            <tbody>      
                 <tr>
                 	<td><% out.write(c.getIdColaborador() + ""); %></td>
                     <td><% out.write(c.getNomeColaborador()); %></td>
-                    <td> <i class="far fa-edit"     ;style="color:blue"></i></td>
-                    <td> <i class="far fa-trash-alt";style="color:red"></i></td>
+                    <td> <i class="far fa-edit"></i></td>
+                    <td> <a href="excluiColaborador.jsp" > <i class="far fa-trash-alt"></i> </a> </td>
                 </tr>
-                <%}%>
+               
             </tbody>
         </table>
+        <%} %>
     </body>
 </html>
+
