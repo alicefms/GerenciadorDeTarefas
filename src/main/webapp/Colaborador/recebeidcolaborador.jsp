@@ -41,7 +41,7 @@
                 	<td><% out.write(c.getIdColaborador() + ""); %></td>
                     <td><% out.write(c.getNomeColaborador()); %></td>
                     <td> <i class="far fa-edit"></i></td>
-                    <td> <a href="excluiColaborador.jsp" > <i class="far fa-trash-alt"></i> </a> </td>
+                    <td> <a onclick="<%daocolab.excluirColaborador(idColaborador); %>"  > <i class="far fa-trash-alt"></i> </a> </td>
                 </tr>
                
             </tbody>
