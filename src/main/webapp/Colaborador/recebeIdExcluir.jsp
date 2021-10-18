@@ -21,7 +21,6 @@
         int idColaborador = Integer.parseInt(request.getParameter("idcolaborador"));
     	DaoColaborador daocolab = new DaoColaborador();
    		daocolab.excluirColaborador(idColaborador);
-   		
    		out.write("Colaborador excluido");
    		
  		 %>

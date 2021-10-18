@@ -68,7 +68,7 @@
 				</td>
 
 				<td><i class="far fa-edit" ;style="color: blue"></i></td>
-				<td><i class="far fa-trash-alt"></i></td>
+				<td> <a onclick="<%daoT.excluirTarefa(idTarefa); %>" ><i class="far fa-trash-alt"></i></a></td>
 			</tr>
                
             </tbody>

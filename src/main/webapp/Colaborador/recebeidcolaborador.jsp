@@ -14,6 +14,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <!-- Fontawesome' -->
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
     </head>
     <body>
         <%
