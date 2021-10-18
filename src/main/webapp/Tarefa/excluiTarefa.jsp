@@ -12,8 +12,8 @@
     
     <body> 
         <div class="container">
-            <form id="matchtech" action="recebeIdTarefa.jsp" method="POST">
-                <h3>Busca Tarefa por Id</h3>
+            <form id="matchtech" action="recebeIdExcluirTarefa.jsp" method="POST">
+                <h3>Exclui Tarefa pelo Id</h3>
                 <p></p>
                 
                 <label class="mensagem" id="msg">
@@ -30,7 +30,7 @@
                 
                 <div>
                     <div class="form-group col-md-2 h-8">
-                        <input type="submit" value="Buscar" class="btn btn-success "/>
+                        <input type="submit" value="Excluir" class="btn btn-success "/>
                     </div>
                     <div class="form-group col-md-2 h-8">                                 
                         <input type="reset"  value="Cancelar" class="btn btn-danger"/>                        

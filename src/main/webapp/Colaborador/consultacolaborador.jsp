@@ -34,7 +34,7 @@
             <tbody>
                 <% for (Colaborador c: listaColaboradores) { %>
                 <tr>
-                	<td><% out.write(c.getIdColaborador() + ""); %></td>
+                	<td><% out.write(Integer.toString(c.getIdColaborador())); %></td>
                     <td><% out.write(c.getNomeColaborador()); %></td>
                     <td> <i class="far fa-edit"     ;style="color:blue"></i></td>
                    <td>  <i class="far fa-trash-alt"></i>  </td>
