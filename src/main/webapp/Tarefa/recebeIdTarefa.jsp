@@ -53,13 +53,12 @@
 				<td>
 					<% out.write(t.getDescrTarefa()); %>
 				</td>
-			<!--  FALTA AJUSTAR A DATA	*************************************** -->
-			
+						
 				<td>
-					fALTA AJUSTAR DATA
+					<% out.write(String.valueOf(t.getDataHoraInicio())); %>
 				</td>
 				<td>
-					fALTA AJUSTAR DATA
+					<% out.write(String.valueOf(t.getDataHoraFim())); %>
 				</td>
 				<td>
 					<% out.write(t.getStatusTarefa()); %>
